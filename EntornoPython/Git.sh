@@ -7,8 +7,6 @@
 #   modules/  → módulos Python descargados dinámicamente
 #   data/     → resultados subidos por cada instancia del troyano
 #
-# DATOS CORREGIDOS:
-#   - URL del repositorio personal eliminada; sustituir por la tuya propia.
 
 mkdir bhptrojan
 cd bhptrojan
