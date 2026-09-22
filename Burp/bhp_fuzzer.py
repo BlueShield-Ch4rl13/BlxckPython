@@ -9,17 +9,7 @@ aleatorias de fragmentos del payload.
 Implementa las interfaces:
   - IIntruderPayloadGeneratorFactory → registra el generador en Intruder.
   - IIntruderPayloadGenerator        → produce los payloads mutados.
-
-ERRORES CORREGIDOS:
-    1. `from burp import IintruderPayloadGeneratorFactory` → nombre incorrecto
-       (la 'I' inicial debe ir seguida de mayúsculas). Corregido a
-       `IIntruderPayloadGeneratorFactory`.
-    2. `from burp import IintruderPayloadGenerator` → mismo problema.
-       Corregido a `IIntruderPayloadGenerator`.
-    3. `class BurpExtender(IBurpExtender, IintruderPayloadGeneratorFactory)` →
-       usa el nombre mal escrito. Corregido.
-    4. `class BHPFuzzer(IintruderPayloadGenerator)` → ídem. Corregido.
-
+  
 REQUISITOS:
     - Burp Suite con soporte Jython
 
