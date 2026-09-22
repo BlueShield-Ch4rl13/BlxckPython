@@ -8,10 +8,6 @@ el mapeado completo de variables de entorno del proceso víctima.
 Las variables de entorno pueden contener rutas, claves de API,
 credenciales o configuración sensible del sistema operativo.
 
-ERRORES CORREGIDOS:
-    - Sin errores; el código original es correcto.
-      Se añaden docstrings y comentarios explicativos.
-
 REQUISITOS:
     - Python 3.x (solo biblioteca estándar)
 
