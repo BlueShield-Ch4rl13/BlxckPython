@@ -5,11 +5,6 @@ Captura un único paquete de red en la interfaz indicada usando
 raw sockets. En Windows habilita el modo promiscuo; en Linux
 captura solo ICMP (sin privilegios de promiscuo).
 
-ERRORES CORREGIDOS:
-    - Sin errores de lógica; archivo correcto.
-      Se parametriza el host via argumento de línea de comandos
-      en vez de estar hardcodeado.
-
 REQUISITOS:
     - Python 3.x
     - Ejecutar con privilegios de root / administrador.
