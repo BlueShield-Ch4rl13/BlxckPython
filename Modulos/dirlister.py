@@ -9,10 +9,6 @@ como cadena de texto.
 El C2 llama a `sys.modules[module].run()` para ejecutarlo; la firma
 `**args` permite pasar parámetros opcionales sin romper la interfaz.
 
-ERRORES CORREGIDOS:
-    - Sin errores; el código original es correcto.
-      Se añaden docstrings y comentarios explicativos.
-
 REQUISITOS:
     - Python 3.x (solo biblioteca estándar)
 
