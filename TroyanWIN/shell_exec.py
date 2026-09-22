@@ -12,10 +12,6 @@ USO TÍPICO EN LAB:
        python -m http.server 8100
   3. Ejecutar este script apuntando al servidor del lab.
 
-ERRORES CORREGIDOS:
-    1. IP personal `192.168.1.200` reemplazada por variable de entorno
-       C2_HOST y puerto por C2_PORT.
-
 REQUISITOS:
     - Python 3.x en Windows
     - (Solo biblioteca estándar + ctypes)
