@@ -7,20 +7,6 @@ midiendo la interacción real del usuario:
   - Se esperan N pulsaciones de teclado, M clics de ratón y P doble-clics
     antes de considerar que el entorno es humano y continuar.
 
-ERRORES CORREGIDOS:
-    1. `get_last_input` estaba definida como método de LASTINPUTINFO (dentro
-       de la definición de la clase `_fields_`), lo que la convierte en un
-       método de instancia de ctypes.Structure, no en una función de módulo.
-       Además, el bucle `while True:` debajo estaba dentro de la clase, lo
-       que produce un SyntaxError o comportamiento inesperado.
-       Corregido: `get_last_input` movida a nivel de módulo; bucle eliminado
-       (no debe ejecutarse en el cuerpo de la clase).
-    2. `first_double_click` se usaba antes de ser inicializada.
-       Corregido: inicializada a `None` al inicio de `detect()`.
-    3. Indentación incorrecta en el bloque `else:` dentro de `detect()`:
-       el `else` colgaba de un `if` anterior de forma ambigua.
-       Corregido con indentación explícita.
-
 REQUISITOS:
     pip install pywin32
 
