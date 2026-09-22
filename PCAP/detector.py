@@ -8,16 +8,6 @@ rectángulos marcados en el directorio de salida.
 Combinado con recapper.py: primero se extraen las imágenes del PCAP
 y luego detector.py las analiza en busca de rostros.
 
-ERRORES CORREGIDOS:
-    1. `except ArithmeticError:` → tipo de excepción incorrecto.
-       `cascade.detectMultiScale` devuelve un ndarray vacío cuando no
-       hay detecciones; llamar a `.any()` sobre él nunca lanza
-       ArithmeticError. El error real al acceder a `.any()` en un
-       resultado inválido es AttributeError.
-       Corregido a `except AttributeError`.
-    2. Rutas personales del escritorio reemplazadas por variables de
-       entorno configurables.
-
 REQUISITOS:
     pip install opencv-python
 
