@@ -6,16 +6,6 @@ en un CSV el comando, ejecutable, PIDs, propietario y privilegios activos.
 Útil para detectar procesos que heredan tokens elevados o se ejecutan
 como SYSTEM.
 
-ERRORES CORREGIDOS:
-    1. `exectutable = new_process.ExecutablePath` → typo.
-       Corregido a `executable` (también ajustado en el f-string).
-    2. `privileges = 'N\A'` → la secuencia `\A` no forma una secuencia
-       de escape estándar pero puede causar warnings. Corregido a `'N/A'`.
-    3. En `get_process_privileges`, el bloque `except` hacía una llamada
-       recursiva infinita: `privileges = get_process_privileges(pid)`.
-       Si la primera llamada falla, la recursión no termina nunca.
-       Corregido: en el except se asigna `privileges = ''` directamente.
-
 REQUISITOS:
     pip install pywin32 wmi
 
