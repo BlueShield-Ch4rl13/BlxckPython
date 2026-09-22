@@ -11,10 +11,6 @@ sobre un buffer de bytes del socket raw, permitiendo acceder a los campos
 del cabecero IPv4 (versión, IHL, TTL, protocolo, IPs src/dst) sin parsear
 manualmente con `struct.unpack`.
 
-ERRORES CORREGIDOS:
-    - Sin errores; el código original es correcto.
-      Se añade docstring y comentarios explicativos.
-
 REQUISITOS:
     - Python 3.x + socket raw (requiere privilegios root/admin)
 
