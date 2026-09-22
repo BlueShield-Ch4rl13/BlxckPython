@@ -5,13 +5,6 @@ Levanta un servidor SSH mínimo que autentica por usuario/contraseña
 y permite enviarle comandos desde la consola del operador.
 Diseñado para usarse junto a ssh_rcmd.py (cliente inverso).
 
-ERRORES CORREGIDOS:
-    1. `check_auth_password` no devolvía `paramiko.AUTH_FAILED` en caso
-       de credenciales incorrectas → ahora devuelve el valor de error explícito.
-    2. Credenciales hardcodeadas con datos reales → reemplazadas por
-       variables de entorno con valores de ejemplo.
-    3. IP de servidor fija → configurable por argumento.
-
 REQUISITOS:
     pip install paramiko
     # Generar clave RSA para el servidor (una sola vez):
