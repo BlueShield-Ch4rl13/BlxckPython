@@ -8,15 +8,6 @@ a través de un servidor SSH accesible desde fuera.
 Flujo:
   [Cliente externo] → [SSH server:remote_port] → [este script] → [local_host:local_port]
 
-ERRORES CORREGIDOS:
-    1. `from tabnanny import verbose` → importación errónea; `tabnanny.verbose`
-       es un int, no una función. Se define una función verbose() local.
-    2. `from socket import socket` → importaba la CLASE directamente.
-       Luego `sock = socket.socket()` falla (no existe atributo .socket en la clase).
-       Corregido: `import socket` y usar `socket.socket()`.
-    3. Faltaba la función `parse_arguments()` completamente. Se implementa.
-    4. `thr.setDaemon(True)` → deprecado en Python 3.10+. Usar `thr.daemon = True`.
-
 REQUISITOS:
     pip install paramiko
 
