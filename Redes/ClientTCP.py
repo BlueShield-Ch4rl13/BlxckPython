@@ -1,19 +1,44 @@
+"""
+ClientTCP.py - Cliente TCP básico con socket
+==============================================
+Abre una conexión TCP a un host/puerto, envía una petición HTTP GET
+y muestra la respuesta del servidor.
+
+ERRORES CORREGIDOS:
+    - target_port = 80 and 443  →  en Python, `80 and 443` evalúa a 443
+      (operador lógico, no tupla). Se elige un único puerto explícito.
+
+REQUISITOS:
+    - Python 3.x
+    - No requiere librerías externas.
+
+EJEMPLOS DE EJECUCIÓN:
+    # Conectar al puerto 80 de google.com
+    python ClientTCP.py
+
+    # Para cambiar el host/puerto, edita las variables target_host y target_port
+    # antes de ejecutar.
+"""
+
 import socket
 
-target_host = "www.google.com"  # Target host to connect to Victima 80 and 443
-target_port = 80 and 443  # Target port to connect to Victima 80 and 443
+# -------------------------------------------------------------------
+# Parámetros de conexión - ajusta según el objetivo de lab
+# -------------------------------------------------------------------
+TARGET_HOST = "www.google.com"   # Host al que conectarse
+TARGET_PORT = 80                  # Puerto HTTP estándar
 
-# Create a socket object
+# Crear el socket TCP (AF_INET = IPv4, SOCK_STREAM = TCP)
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# connect the client
-client.connect((target_host, target_port))
+# Conectar al servidor
+client.connect((TARGET_HOST, TARGET_PORT))
 
-# Send some data
-client.send(b"GET / HTTP/1.1\r\nHost: google.com\r\n\r\n")
+# Enviar petición HTTP GET mínima
+client.send(b"GET / HTTP/1.1\r\nHost: www.google.com\r\n\r\n")
 
-# Receive some data
+# Recibir hasta 4096 bytes de respuesta
 response = client.recv(4096)
 
-print(response.decode())
+print(response.decode(errors="replace"))
 client.close()

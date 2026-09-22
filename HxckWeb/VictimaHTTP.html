@@ -1,0 +1,36 @@
+<!--
+  VictimaHTTP.html - Formulario de ejemplo para prácticas de HTTP
+  ================================================================
+  Página HTML de referencia que muestra la estructura típica del
+  formulario de login de WordPress (wp-login.php). Se usa como
+  plantilla para entender los campos que deben enviarse en ataques
+  de autenticación (WP_killer.py, bruter.py).
+
+  DATOS CORREGIDOS:
+    - URL personal reemplazada por dominio de ejemplo genérico.
+
+  NOTA: Este fichero es solo un fragmento de referencia HTML;
+  no forma parte de una aplicación funcional.
+-->
+<form name="loginform" id="loginform"
+      action="http://target-example.com/wordpress/wp-login.php"
+      method="post">
+    <!-- FIX: URL personal reemplazada por dominio de ejemplo -->
+
+    <p>
+        <label for="user_login">Username or Email Address</label>
+        <input type="text" name="log" id="user_login" value="" size="20" />
+    </p>
+
+    <div class="user-pass-wrap">
+        <label for="user_pass">Password</label>
+        <div class="wp-pwd">
+            <input type="password" name="pwd" id="user_pass" value="" size="20" />
+        </div>
+    </div>
+
+    <p class="submit">
+        <input type="submit"  name="wp-submit"   id="wp-submit"   value="Log In" />
+        <input type="hidden"  name="testcookie"  value="1" />
+    </p>
+</form>
