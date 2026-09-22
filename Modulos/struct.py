@@ -10,10 +10,6 @@ Define la clase `IP` que parsea manualmente el cabecero IPv4 de 20 bytes
 usando `struct.unpack` (Python puro, sin ctypes). Este enfoque es
 multiplataforma y no depende del layout de memoria del C-struct.
 
-ERRORES CORREGIDOS:
-    - Sin errores; el código original es correcto.
-      Se añaden docstrings y comentarios explicativos.
-
 REQUISITOS:
     - Python 3.x (solo biblioteca estándar)
 
