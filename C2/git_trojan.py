@@ -11,14 +11,6 @@ La clase GitImporter se registra en sys.meta_path para interceptar las
 importaciones de módulos y descargarlos del repo en lugar del sistema
 de ficheros local.
 
-ERRORES CORREGIDOS:
-    1. `base64.b64decode(bindata)` en store_module_result → debería ser
-       `base64.b64encode(bindata)`. El contenido (bindata) son bytes que
-       se quieren codificar para guardarlos como texto en GitHub; decodificar
-       bytes ya en binario produce basura o un error.
-    2. Nombre de usuario personal `'tiarno'` reemplazado por variable
-       de entorno GITHUB_USER.
-
 REQUISITOS:
     pip install github3.py
 
