@@ -4,13 +4,6 @@ lxml.py - Scraping de enlaces con lxml y XPath
 Descarga una página web con `requests` y extrae todos los hipervínculos
 (<a href="...">) usando lxml para parsear el HTML y XPath para la búsqueda.
 
-ERRORES CORREGIDOS:
-    1. `etree.parser(BytesIO(content), parser=parser)` → función inexistente.
-       Corregido a `etree.parse(BytesIO(content), parser=parser)`.
-    2. `content.finall('//a')` → método inexistente.
-       Corregido a `content.findall('.//a')` (XPath relativo).
-    3. URL personal reemplazada por dominio de ejemplo.
-
 REQUISITOS:
     pip install lxml requests
 
