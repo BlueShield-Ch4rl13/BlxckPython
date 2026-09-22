@@ -5,11 +5,6 @@ Recorre una instalación local de WordPress (o cualquier directorio web),
 genera la lista de rutas de ficheros existentes filtrando archivos estáticos
 y verifica cuáles de esas rutas son accesibles en el servidor remoto.
 
-ERRORES CORREGIDOS:
-    1. Ruta personal `/home/ch4rl13/Downloads/wordpress` reemplazada por
-       variable de entorno WP_PATH con valor por defecto genérico.
-    2. URL personal reemplazada por constante TARGET configurable.
-
 REQUISITOS:
     pip install requests
 
