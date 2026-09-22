@@ -8,12 +8,6 @@ Herramienta de red multiuso que replica funcionalidades básicas de netcat:
   - Recibe y guarda un archivo (-u NOMBRE_ARCHIVO)
   - Envía datos al servidor (modo cliente, sin flags)
 
-ERRORES CORREGIDOS:
-    - Modo listen: buffer inicializado como b'' (bytes), no como str.
-    - self.socket.send(self.buffer) recibe bytes → ya correcto en el flujo.
-    - La clase Netcat estaba definida dentro del bloque if __name__; se mantiene
-      la estructura original que ya era válida (clase definida ANTES de instanciarla).
-
 REQUISITOS:
     - Python 3.x
     - Módulos estándar: argparse, socket, shlex, subprocess, threading
