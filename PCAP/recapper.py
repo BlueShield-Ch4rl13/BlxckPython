@@ -10,17 +10,6 @@ Flujo:
     2. get_responses():   reconstruye las respuestas HTTP de cada sesión.
     3. write():           extrae el contenido de un tipo dado y lo guarda.
 
-ERRORES CORREGIDOS:
-    1. `get_header()` no tenía `return header` al final.
-       Sin el return, siempre devolvía None y ninguna respuesta se procesaba.
-    2. `Recapper = Recapper(pfile)` → variable con el mismo nombre que la clase,
-       lo que destruye la referencia a la clase en ese scope.
-       Corregido a `recapper = Recapper(pfile)` (minúscula).
-    3. `recapper.write('iamge')` → typo; corregido a `'image'`.
-    4. `'Content_Encoding'` → clave HTTP incorrecta (guion bajo en lugar de guion).
-       Corregido a `'Content-Encoding'`.
-    5. Rutas personales reemplazadas por variables de entorno.
-
 REQUISITOS:
     pip install scapy
 
