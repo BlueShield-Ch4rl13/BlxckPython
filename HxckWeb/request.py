@@ -5,11 +5,6 @@ Muestra cómo realizar peticiones GET y POST usando `requests`,
 la librería HTTP más popular de Python. GET recupera una página;
 POST envía datos al servidor (p. ej. un formulario de login).
 
-ERRORES CORREGIDOS:
-    1. Typo de variable: `respose` → `response` (en ambas asignaciones).
-    2. URL personal reemplazada por dominio de ejemplo genérico.
-    3. Credenciales de ejemplo reemplazadas por marcadores de posición.
-
 REQUISITOS:
     pip install requests
 
