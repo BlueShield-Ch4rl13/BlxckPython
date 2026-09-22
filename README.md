@@ -92,7 +92,7 @@ Sniffers de red usando sockets raw (`AF_INET`, `SOCK_RAW`). Parsean cabeceras IP
 
 - **sniffer.py** — sniffer básico con parámetro de host.
 - **sniffer_ip_header_decode.py** — decodifica campos del cabecero IP.
-- **sniffer_with_icmp.py** — añade decodificación del cabecero ICMP. *Reconstruido completamente* (fichero original truncado).
+- **sniffer_with_icmp.py** — añade decodificación del cabecero ICMP.
 - **scanner.py** — envía paquetes UDP y detecta respuestas ICMP para mapear hosts activos.
 
 ```bash
