@@ -5,16 +5,6 @@ Obtiene el formulario de login de WordPress, extrae los campos ocultos
 (nonce, testcookie…) y lanza un ataque de fuerza bruta multihilo
 probando cada contraseña de la wordlist.
 
-ERRORES CORREGIDOS:
-    1. `etree.parser(BytesIO(content), parser=parser)` → función inexistente.
-       Corregido a `etree.parse(BytesIO(content), parser=parser)`.
-    2. `print("Password is %s\n" % brute)` → variable `brute` no definida.
-       Corregido a `passwd` (variable correcta del bucle).
-    3. `b = Bruter('ch4rl13', url)` → `url` no definida en ese scope.
-       Corregido a `TARGET`.
-    4. Ruta personal del wordlist reemplazada por variable de entorno.
-    5. URLs personales reemplazadas por ejemplo genérico.
-
 REQUISITOS:
     pip install requests lxml
 
