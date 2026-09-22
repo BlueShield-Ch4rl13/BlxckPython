@@ -6,20 +6,6 @@ captura el contenido del portapapeles al detectar Ctrl+V y devuelve
 el log completo como string. Diseñado para ejecutarse durante un tiempo
 determinado (TIMEOUT segundos) y ser llamado como módulo por un troyano.
 
-ERRORES CORREGIDOS:
-    1. `import pyWinhook as pyHook import sys` → sintaxis de import
-       combinada inválida. Corregido a dos líneas separadas:
-       `import pyWinhook as pyHook` y `import sys`.
-    2. `while time.thread_time() < TIMEOUT:` → `time.thread_time()` mide
-       tiempo de CPU del hilo, no tiempo real transcurrido. Para un timeout
-       por tiempo real se debe usar `time.time()`. Además, se necesita
-       guardar el tiempo de inicio. Corregido.
-    3. `if __name__ == '__main__':` estaba indentado dentro del cuerpo de
-       la clase Keylogger (nivel de método), haciéndolo sintácticamente
-       inválido o inalcanzable. Movido al nivel de módulo.
-    4. `print(run())` → `run` es un método de instancia, no una función
-       de módulo. Corregido a `kl_runner = Keylogger(); print(kl_runner.run())`.
-
 REQUISITOS:
     pip install pyWinhook pywin32 pythoncom
 
