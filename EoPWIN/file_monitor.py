@@ -8,12 +8,6 @@ modificación, vuelca el contenido del fichero por consola.
 Usa la API win32file.ReadDirectoryChangesW para recibir notificaciones del
 kernel en tiempo real sin sondeo activo.
 
-ERRORES CORREGIDOS:
-    1. Indentación incorrecta del bloque `try:` dentro de `while True:`.
-       El `try` estaba al mismo nivel que el `while` (fuera del bucle),
-       por lo que el bucle solo ejecutaba una iteración y luego salía.
-       Corregido: el `try` debe estar indentado dentro del `while True:`.
-
 REQUISITOS:
     pip install pywin32
 
