@@ -5,11 +5,6 @@ El cliente se conecta al servidor SSH y envía el mensaje inicial.
 Luego el servidor envía comandos y el cliente los ejecuta localmente,
 devolviendo la salida. Es la parte cliente de un canal SSH inverso.
 
-ERRORES CORREGIDOS:
-    1. `cmd = command.decode()` — `command` ya es str (resultado de
-       `ssh_session.recv(1024).decode()`). Llamar `.decode()` de nuevo
-       lanza AttributeError. Se elimina el segundo `.decode()`.
-
 REQUISITOS:
     pip install paramiko
 
