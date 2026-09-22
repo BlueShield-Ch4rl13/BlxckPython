@@ -13,19 +13,6 @@ Flujo:
      con sufijos comunes ("", "1", "!", año actual).
   4. La wordlist se imprime por la consola de Burp.
 
-ERRORES CORREGIDOS:
-    1. `from burp import IcontextMenuFactory` → typo (la 'C' de Context debe
-       ser mayúscula). Corregido a `IContextMenuFactory`.
-    2. `from javax.swing import JmenuItem` → typo. Corregido a `JMenuItem`.
-    3. `from HTMLParser import HTMLParser` → módulo de Python 2.
-       En Python 3 / Jython: `from html.parser import HTMLParser`.
-    4. `class TagStripper: def __int__(self)` → typo en el nombre del método
-       (`__int__` es conversión a entero). Corregido a `__init__`.
-    5. `word.capitaliza()` → método inexistente en Python.
-       Corregido a `word.capitalize()`.
-    6. `"%S%S" % (password, suffix)` → `%S` no es un especificador válido en Python.
-       Corregido a `"%s%s"` (minúscula).
-
 REQUISITOS:
     - Burp Suite con soporte Jython
 
