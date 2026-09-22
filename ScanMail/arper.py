@@ -9,15 +9,6 @@ Realiza un ataque ARP Spoofing entre una víctima y su gateway:
 
 ADVERTENCIA: Solo usar en entornos de lab propios con permiso explícito.
 
-ERRORES CORREGIDOS:
-    1. `from multiprocessing import process` → `from multiprocessing import Process`
-       (el nombre correcto es con P mayúscula).
-    2. `self.poison_thread = process(...)` → `Process(...)` (mismo error).
-    3. Ambos hilos se asignaban a `self.poison_thread`, sobreescribiendo el
-       primero. Se usan `self.poison_thread` y `self.sniff_thread` por separado.
-    4. `print(''*30)` → `print('-'*30)`: multiplicar la cadena vacía da vacío.
-    5. En `sniff()`, `victim` → `self.victim`: variable de instancia, no local.
-
 REQUISITOS:
     pip install scapy
     Ejecutar con root / administrador. En Linux: sysctl -w net.ipv4.ip_forward=1
