@@ -8,10 +8,6 @@ Proporciona dos métodos de exfiltración de datos por email:
 NOTA: Este módulo requiere Windows para la función outlook() (win32com).
       plain_email() funciona en cualquier plataforma con acceso SMTP.
 
-ERRORES CORREGIDOS:
-    1. Datos personales (email, contraseña) reemplazados por variables
-       de entorno con indicación clara de cómo configurarlas.
-
 REQUISITOS:
     pip install pywin32   # solo necesario para outlook()
 
