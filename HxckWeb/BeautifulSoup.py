@@ -4,12 +4,6 @@ BeautifulSoup.py - Scraping de enlaces con BeautifulSoup4
 Descarga una página web con `requests` y extrae todos los hipervínculos
 (<a href="...">) usando BeautifulSoup con el parser HTML estándar.
 
-ERRORES CORREGIDOS:
-    1. `tree.fin_all(...)` → `tree.find_all(...)` (typo en el nombre del método).
-    2. El selector `'//a'` es sintaxis XPath, no válida en BeautifulSoup.
-       Corregido a `'a'` (selector de etiqueta CSS/BS4).
-    3. URL personal reemplazada por dominio de ejemplo.
-
 REQUISITOS:
     pip install requests beautifulsoup4
 
