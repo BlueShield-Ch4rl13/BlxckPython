@@ -4,9 +4,6 @@ SrvTCP.py - Servidor TCP multihilo
 Escucha conexiones TCP entrantes en 0.0.0.0:9999 y las atiende
 en hilos independientes. Responde con un ACK a cada mensaje recibido.
 
-ERRORES CORREGIDOS:
-    - Sin errores de código; archivo correcto en el original.
-
 REQUISITOS:
     - Python 3.x
     - Módulo estándar: socket, threading
