@@ -5,10 +5,6 @@ Envía un formulario de login mediante POST usando la biblioteca estándar
 de Python 3. Los datos del formulario se codifican con urllib.parse.urlencode
 y se convierten a bytes antes de pasarlos a la Request.
 
-ERRORES CORREGIDOS:
-    1. URL personal eliminada → reemplazada por dominio de ejemplo.
-    2. Credenciales reales eliminadas → marcadores de posición.
-
 REQUISITOS:
     - Python 3.x (solo biblioteca estándar)
 
