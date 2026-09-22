@@ -4,10 +4,6 @@ mail_sniffer.py - Sniffer básico de un paquete con scapy
 Captura el primer paquete de red y muestra su estructura completa
 usando scapy. Útil como punto de partida para inspección de protocolos.
 
-ERRORES CORREGIDOS:
-    1. `if __name__ == '__name__':` → `if __name__ == '__main__':`
-    2. Indentación inconsistente en la función main().
-
 REQUISITOS:
     pip install scapy
     Ejecutar con privilegios de root / administrador.
