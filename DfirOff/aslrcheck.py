@@ -5,15 +5,7 @@ Itera todos los procesos de un volcado de memoria Windows, extrae el PE
 de cada uno y verifica si tiene ASLR activo comprobando:
   - IMAGE_DLL_CHARACTERISTICS_DYNAMIC_BASE (0x0040) en DllCharacteristics
   - IMAGE_FILE_RELOCS_STRIPPED (0x0001) en FileHeader.Characteristics
-
-ERRORES CORREGIDOS:
-    1. `requirements.SymboltableRequirement` → `requirements.SymbolTableRequirement`
-       (mayúscula en 'T' de Table).
-    2. `element_type = init` → `element_type = int`
-       (`init` no es un tipo; se necesita el tipo Python `int`).
-    3. `proc.ImageFIleName` → `proc.ImageFileName`
-       (typo: 'FIle' → 'File'; la 'l' estaba en mayúscula por error).
-
+  
 REQUISITOS:
     pip install volatility3 pefile
     Ejecutar como plugin dentro del framework Volatility 3.
