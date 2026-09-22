@@ -4,9 +4,6 @@ sniffer_ip_header_decode.py - Sniffer con decodificación de cabecera IP
 Captura paquetes raw y deserializa la cabecera IP (20 bytes) mostrando
 protocolo, IP origen e IP destino de cada paquete.
 
-ERRORES CORREGIDOS:
-    - Sin errores; archivo correcto en el original.
-
 REQUISITOS:
     - Python 3.x
     - Root / administrador para raw sockets.
