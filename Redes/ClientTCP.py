@@ -4,10 +4,6 @@ ClientTCP.py - Cliente TCP básico con socket
 Abre una conexión TCP a un host/puerto, envía una petición HTTP GET
 y muestra la respuesta del servidor.
 
-ERRORES CORREGIDOS:
-    - target_port = 80 and 443  →  en Python, `80 and 443` evalúa a 443
-      (operador lógico, no tupla). Se elige un único puerto explícito.
-
 REQUISITOS:
     - Python 3.x
     - No requiere librerías externas.
