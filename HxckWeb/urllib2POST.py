@@ -4,13 +4,6 @@ urllib2POST.py - Petición HTTP GET con cabeceras personalizadas (Python 3)
 Realiza una petición GET enviando una cabecera User-Agent personalizada
 usando solo la biblioteca estándar de Python 3.
 
-ERRORES CORREGIDOS:
-    1. `import urllib2` → módulo de Python 2; reemplazado por
-       `urllib.request` de Python 3.
-    2. En Python 3, `urllib2.Request(url, headers=headers)` es
-       `urllib.request.Request(url, headers=headers)`.
-    3. URL personal reemplazada por dominio de ejemplo.
-
 REQUISITOS:
     - Python 3.x (solo biblioteca estándar)
 
