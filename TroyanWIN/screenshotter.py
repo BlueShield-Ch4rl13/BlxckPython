@@ -6,13 +6,6 @@ API GDI vía pywin32 y guarda el resultado como fichero BMP. La función
 `run()` devuelve el contenido binario de la captura para que pueda ser
 exfiltrado por el troyano.
 
-ERRORES CORREGIDOS:
-    1. `open('screenshot.bmp')` → abre el fichero en modo texto ('r').
-       Los ficheros BMP son binarios; leerlos en modo texto produce datos
-       corruptos en Windows (conversión de saltos de línea) y falla en
-       plataformas POSIX.
-       Corregido a `open('screenshot.bmp', 'rb')`.
-
 REQUISITOS:
     pip install pywin32
 
