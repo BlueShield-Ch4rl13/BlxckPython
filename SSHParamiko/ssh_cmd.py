@@ -4,12 +4,6 @@ ssh_cmd.py - Ejecución remota de comandos SSH con Paramiko
 Conecta a un servidor SSH usando usuario/contraseña y ejecuta
 un comando, mostrando su salida estándar y de error.
 
-ERRORES CORREGIDOS:
-    1. Firma de función inconsistente con la llamada:
-       - Definición : execute_ssh_command(hostname, username, password, cmd)  → 4 parámetros
-       - Llamada    : execute_ssh_command(ip, port, username, password, cmd)  → 5 parámetros
-       Se añade `port` a la firma de la función para que coincida con la llamada.
-
 REQUISITOS:
     pip install paramiko
 
