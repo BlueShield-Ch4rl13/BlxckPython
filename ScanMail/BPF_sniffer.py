@@ -5,10 +5,6 @@ Captura tráfico en los puertos POP3 (110), SMTP (25) e IMAP (143)
 y muestra aquellos paquetes TCP cuyo payload contiene las cadenas
 'user' o 'pass', lo que puede revelar credenciales en claro.
 
-ERRORES CORREGIDOS:
-    1. `if __name__ == '__name__':` → `if __name__ == '__main__':`
-       ('__name__' es la cadena literal, no la variable especial)
-
 REQUISITOS:
     pip install scapy
     Ejecutar con privilegios de root / administrador.
