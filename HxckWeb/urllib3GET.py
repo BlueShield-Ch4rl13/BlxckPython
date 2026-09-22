@@ -5,10 +5,6 @@ Recupera el contenido de una URL usando el módulo estándar urllib.
 El nombre del archivo hace referencia a la "tercera generación" de
 urllib en Python 3, que unificó urllib, urllib2 y httplib de Python 2.
 
-ERRORES CORREGIDOS:
-    - Sin errores; el código original ya era Python 3 correcto.
-      URL personal reemplazada por dominio de ejemplo.
-
 REQUISITOS:
     - Python 3.x (solo biblioteca estándar)
 
