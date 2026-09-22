@@ -5,14 +5,6 @@ Lee una wordlist de rutas potenciales, genera variaciones con extensiones
 comunes y lanza peticiones HTTP GET concurrentes para descubrir rutas
 existentes en un servidor web (respuesta 200).
 
-ERRORES CORREGIDOS:
-    1. En `extend_words(word)`, se llamaba a `word.put(...)` sobre el
-       parámetro `word` (un str), en lugar de `words.put(...)` sobre la
-       Queue definida en el scope de `get_words()`. Corregido a `words.put(...)`.
-    2. Ruta personal del wordlist reemplazada por variable de entorno
-       con valor por defecto.
-    3. URL personal reemplazada por constante TARGET genérica.
-
 REQUISITOS:
     pip install requests
 
