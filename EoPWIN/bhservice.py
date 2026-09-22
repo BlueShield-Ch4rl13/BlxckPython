@@ -6,14 +6,6 @@ un script VBScript desde SRCDIR a C:\Windows\TEMP y lo ejecuta con cscript.
 Si el directorio SRCDIR tiene permisos de escritura para usuarios sin privilegios,
 un atacante puede sustituir el .vbs para elevar privilegios.
 
-ERRORES CORREGIDOS:
-    1. `SRCIR = '...'` → typo (falta la 'D'). Corregido a `SRCDIR`.
-    2. `servicemanager.PrepareToHost.Single(BHServerSvc)` → nombre incorrecto.
-       El método se llama `PrepareToHostSingle`. Corregido.
-    3. `else.` → error de sintaxis. Corregido a `else:`.
-    4. Ruta personal `C:\\Users\\ch4rl13\\work` reemplazada por variable
-       de entorno BH_SRCDIR.
-
 REQUISITOS:
     pip install pywin32
     pyinstaller -F --hiddenimport win32timezone bhservice.py
