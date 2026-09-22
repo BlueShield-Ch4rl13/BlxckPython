@@ -6,14 +6,6 @@ Proporciona dos mecanismos de transferencia de ficheros a un servidor C2:
   - transmit():   transfiere el fichero por socket raw usando la función
                   win32file.TransmitFile (zero-copy, solo Windows).
 
-ERRORES CORREGIDOS:
-    1. `client.win32file._get_osfhandle(f.fileno())` →
-       `win32file.get_osfhandle(f.fileno())` — la función pertenece al
-       módulo `win32file`, no al objeto socket ni a `client`.
-    2. Dirección IP del servidor C2 reemplazada por variable de entorno
-       C2_HOST con valor por defecto neutro.
-    3. Email personal del login FTP reemplazado por ejemplo genérico.
-
 REQUISITOS:
     pip install pywin32   # win32file, solo Windows
 
