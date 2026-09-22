@@ -13,12 +13,6 @@ Métodos disponibles:
   - ie_paste     → Pastebin a través de Internet Explorer (Windows)
   - plain_paste  → Pastebin mediante la API pública
 
-ERRORES CORREGIDOS:
-    1. Ruta Windows de búsqueda `'c:\\'` documentada como configurable
-       mediante variable de entorno EXFIL_ROOT.
-    2. Importación de `decrypt` duplicada al final del fichero movida
-       a un bloque de ejemplo independiente.
-
 REQUISITOS:
     pip install pycryptodomex
     (Otros módulos: ver cryptor.py, email_exfil.py, transmit_exfil.py, paste_exfil.py)
