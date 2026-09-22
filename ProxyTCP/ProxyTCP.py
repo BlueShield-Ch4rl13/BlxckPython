@@ -6,16 +6,6 @@ volcando en consola el tráfico (en hexadecimal y ASCII) en ambas
 direcciones. Permite modificar los buffers antes del reenvío
 editando las funciones request_handler / response_handler.
 
-ERRORES CORREGIDOS:
-    1. `from pyparsing import line` → importación innecesaria e incorrecta.
-       `line` es una variable de bucle local, no una función de pyparsing.
-       Se elimina el import.
-    2. `print(line)` en proxy_handler y server_loop → referenciaba el objeto
-       `line` de pyparsing (que tampoco existe así). Reemplazado por un
-       separador visual legible `print("-" * 50)`.
-    3. `if __name__ == "__main__":` estaba indentado DENTRO de `main()`,
-       por lo que nunca se ejecutaba. Movido al nivel del módulo.
-
 REQUISITOS:
     pip install (ninguno adicional; solo biblioteca estándar)
 
