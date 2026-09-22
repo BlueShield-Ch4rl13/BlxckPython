@@ -6,19 +6,6 @@ Extensión para Burp Suite (Jython) que añade una opción de menú contextual
 en la API Cognitive de Bing (`ip:<ip>` y `domain:<host>`) y añade
 automáticamente al scope de Burp las URLs encontradas.
 
-ERRORES CORREGIDOS:
-    1. `from burp import IContexMenuFactory` → typo (le falta la 't').
-       Corregido a `IContextMenuFactory`.
-    2. `from javax.swing import JmenuItem` → typo (la 'M' debe ser mayúscula).
-       Corregido a `JMenuItem`.
-    3. `from thread import start_new_thread` → módulo de Python 2.
-       En Python 3 / Jython 2.7 se debe usar `threading.Thread` o
-       `from threading import Thread`. Corregido.
-    4. `'0cp-Apim-Subscription-Key'` → typo (comienza con cero '0', no la
-       letra 'O'). Corregido a `'Ocp-Apim-Subscription-Key'`.
-    5. `urllib.quote(...)` → Python 2. En Python 3 / Jython:
-       `urllib.parse.quote(...)`. Corregido.
-
 REQUISITOS:
     - Burp Suite con soporte Jython (Extender → Options → Jython standalone)
     - API Key de Bing Cognitive Search v7 en la variable API_KEY
