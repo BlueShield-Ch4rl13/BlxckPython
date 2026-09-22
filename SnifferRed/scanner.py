@@ -10,10 +10,6 @@ Funciona en dos fases:
   2. El hilo principal captura respuestas ICMP y filtra las que contienen
      el mensaje mágico para confirmar que el host está activo.
 
-ERRORES CORREGIDOS:
-    - Sin errores de lógica en el original; código correcto.
-      Se ajusta SUBNET y se documenta el script.
-
 REQUISITOS:
     - Python 3.x
     - Root / administrador para raw sockets.
