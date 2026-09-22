@@ -5,14 +5,6 @@ Extiende sniffer_ip_header_decode.py añadiendo la decodificación de la
 cabecera ICMP (type, code) para los paquetes que correspondan al
 protocolo ICMP.
 
-ERRORES CORREGIDOS:
-    1. El archivo original estaba TRUNCADO — el cuerpo de la función sniff()
-       quedaba cortado a mitad, con un bloque `try/except` duplicado e
-       inaccesible. Se reconstruyó la función completa combinando las dos
-       versiones parciales del repositorio.
-    2. `from ctypes import sizeof` faltaba para calcular el tamaño de ICMP.
-       Se usa `struct.calcsize` en su lugar para no depender de ctypes aquí.
-
 REQUISITOS:
     - Python 3.x
     - Root / administrador para raw sockets.
