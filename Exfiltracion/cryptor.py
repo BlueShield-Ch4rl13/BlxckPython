@@ -11,19 +11,6 @@ Flujo de cifrado:
 Flujo de descifrado:
   base64 → split bytes → RSA.decrypt(session_key) → AES-EAX.decrypt → zlib.decompress
 
-ERRORES CORREGIDOS:
-    1. `from cryptodome.Cipher import AES` → módulo incorrecto (minúsculas).
-       Corregido a `from Cryptodome.Cipher import AES` (mayúscula inicial).
-    2. `ciphertext, tag = cipher_aes.encrypt_and_digest(compressed_text)` →
-       variable `compressed_text` no definida. Corregido a `compressed`
-       (nombre devuelto por zlib.compress).
-    3. `RSA.importkey(key)` → método incorrecto.
-       Corregido a `RSA.import_key(key)`.
-    4. `open(f'key.{keytype}')` → modo texto. Las claves son bytes (PEM).
-       Corregido a `open(f'key.{keytype}', 'rb')`.
-    5. Bloque `if __name__ == '__main__':` duplicado → solo uno puede ejecutarse.
-       Fusionados en un único bloque que genera claves y luego las usa.
-
 REQUISITOS:
     pip install pycryptodomex   # o pycryptodome
 
