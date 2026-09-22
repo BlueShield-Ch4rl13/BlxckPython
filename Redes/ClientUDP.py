@@ -4,9 +4,6 @@ ClientUDP.py - Cliente UDP básico con socket
 Envía un mensaje UDP a un host/puerto y espera respuesta.
 UDP no establece conexión: el datagrama se envía y se espera respuesta.
 
-ERRORES CORREGIDOS:
-    - Sin errores de código; archivo correcto en el original.
-
 REQUISITOS:
     - Python 3.x
     - El servidor UDP debe estar escuchando en target_host:target_port.
