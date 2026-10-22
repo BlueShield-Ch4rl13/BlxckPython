@@ -1,5 +1,9 @@
 # bl4ckpython — Toolkit de Python para Hacking Ético y Ciberseguridad
 
+> **Nota legal:** Este toolkit está diseñado exclusivamente para entornos de laboratorio, CTFs y formación en ciberseguridad ofensiva. El uso de estas herramientas contra sistemas sin autorización explícita es ilegal.
+
+> **Origen:** ejercicios del libro *Black Hat Python* (Justin Seitz y Tim Arnold, No Starch Press), reescritos y documentados como práctica. No es una herramienta propia ni para uso en producción.
+
 > **Versión documentada.**  
 > Se ha añadido documentación exhaustiva y se han eliminado todos los datos personales (URLs, credenciales, rutas, nombres de usuario).
 
@@ -338,5 +342,3 @@ pip install scapy opencv-python
 # Burp (Jython — instalar en Burp Suite)
 # Descargar Jython standalone desde https://www.jython.org/
 ```
-
-> **Nota legal:** Este toolkit está diseñado exclusivamente para entornos de laboratorio, CTFs y formación en ciberseguridad ofensiva. El uso de estas herramientas contra sistemas sin autorización explícita es ilegal.
