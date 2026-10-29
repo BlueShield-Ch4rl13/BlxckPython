@@ -9,7 +9,7 @@
 #
 
 mkdir bhptrojan
-cd bhptrojan
+cd bhptrojan || exit
 git init
 mkdir modules
 mkdir config
