@@ -1,0 +1,36 @@
+name: CI
+
+# Prácticas de Black Hat Python: no hay tests, pero sí se puede comprobar
+#  - que ningún .py tiene errores de sintaxis ni nombres sin definir (ruff)
+#  - que los scripts de EntornoPython no tienen errores de bash (shellcheck)
+# Algunos ficheros son Jython (extensiones de Burp): ruff solo mira sintaxis y
+# nombres, así que los imports de burp/java no molestan.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**/*.md'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Ruff (errores de sintaxis y nombres)
+        run: |
+          pipx install ruff
+          ruff check --select E9,F63,F7,F82 .
+
+      - name: Shellcheck
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck
+          shellcheck -S warning EntornoPython/*.sh
