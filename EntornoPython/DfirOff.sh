@@ -9,15 +9,15 @@
 python3 -m venv vol3
 # En Linux:  source vol3/bin/activate
 # En Windows: vol3/Scripts/Activate.ps1
-cd vol3
+cd vol3 || exit
 git clone https://github.com/volatilityfoundation/volatility3.git
-cd volatility3/
+cd volatility3/ || exit
 python setup.py install
 pip install pycryptodome
 
 # Verificar instalación
 python vol.py --help
-cd volatility/framework/plugins/windows/
+cd volatility/framework/plugins/windows/ || exit
 ls
 
 # --- Reconocimiento general ---

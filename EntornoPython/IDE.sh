@@ -26,7 +26,7 @@ sudo apt-get install code
 
 # --- Crear directorio de proyecto y entorno virtual ---
 mkdir mi_proyecto
-cd mi_proyecto
+cd mi_proyecto || exit
 
 python3 -m venv venv3
 source venv3/bin/activate
